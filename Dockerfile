@@ -28,7 +28,6 @@ RUN adduser --system --uid 1001 nextjs
 # Ensure the .next directory is created and owned correctly
 RUN mkdir -p .next && chown nextjs:nodejs .next
 
-COPY --from=builder /app/public ./public
 
 RUN mkdir .nextjs
 
